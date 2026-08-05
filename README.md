@@ -10,11 +10,14 @@ a publicly reachable source URL. This repository is that URL.
 themselves live in a private repository.
 
 ```
-<actor-name>/<nn>-<slug>.png
+<actor-name>/<nn>-<slug>.png          served on the Store page
+<actor-name>/src/<name>-raw.png       raw screen captures that a served image composites in
 ```
 
 Images are generated from HTML sources kept next to the actor, so any number on them can be
-re-rendered when it changes. Consumed as:
+re-rendered when it changes. `src/` is the exception: a capture of a real product UI cannot be
+re-rendered from HTML, so the capture itself is kept here as its only off-machine backup. It is
+never served. Served images are consumed as:
 
 ```
 https://raw.githubusercontent.com/dc83-lab/apify-actor-assets/main/<actor-name>/<file>.png
