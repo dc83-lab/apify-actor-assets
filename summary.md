@@ -15,8 +15,7 @@ Last updated: 2026-08-08
 
 ## Known gaps
 
-- Whether all 4 served images are actually referenced by the live Store README was not
-  verified during onboarding (the actor's README lives in the private actors repo).
+- Moved to `DEBT.md` 2026-08-20 (one open item: Store README references for the 4 images).
 
 ## Next steps
 
