@@ -15,7 +15,7 @@ Last updated: 2026-08-08
 
 ## Known gaps
 
-- Moved to `DEBT.md` 2026-08-20 (one open item: Store README references for the 4 images).
+- Moved to `docs/backlog/` 2026-08-20 (one open item: Store README references for the 4 images).
 
 ## Next steps
 

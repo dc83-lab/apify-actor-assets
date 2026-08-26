@@ -1,10 +1,8 @@
-# Deferred work
-
-Real findings that were not urgent enough to interrupt the work that found them. Not a plan and
-not a changelog: `Task_List.md` holds the active plan, this file holds what would otherwise be
-forgotten. Rules and schema: `~/.claude/skills/tech-debt/SKILL.md`; raise it with `/debt`.
-
-## Nobody checked that the live Store page actually uses all 4 served images
+---
+worth: later
+added: 2026-08-20
+---
+# Nobody checked that the live Store page actually uses all 4 served images
 
 - **Where**: the 4 images served from this repo; the referencing README lives in the private
   actors repo, not here
