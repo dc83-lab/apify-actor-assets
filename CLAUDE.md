@@ -22,4 +22,4 @@ no credentials, no notes; the actors live in a private repository. Layout and UR
 - Served image URLs are referenced from live Store pages: **renaming or deleting a served
   PNG breaks the actor's public page** — check the actor README before touching one.
 - Checkpoints: `summary.md` and `Task_List.md` each ≤80 lines AND ≤8000 bytes (the
-  SessionStart hook injects only `head -80`).
+  SessionStart hook cuts at the first cap hit and prints `[TRUNCATED …]`).
