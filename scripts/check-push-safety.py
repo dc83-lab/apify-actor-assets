@@ -107,7 +107,9 @@ LOG_OPTIONS = ("--format=", "--no-color", "--diff-merges=first-parent")
 
 def run(*args: str) -> str:
     try:
-        result = subprocess.run(args, check=True, capture_output=True, text=True)
+        result = subprocess.run(
+            args, check=True, capture_output=True, text=True, errors="replace"
+        )
     except OSError as exc:  # git missing / not executable
         raise GuardError(f"cannot run `{' '.join(args)}`: {exc}") from exc
     except subprocess.CalledProcessError as exc:
@@ -223,9 +225,11 @@ def added_lines_by_file(args: argparse.Namespace) -> dict[str, list[str]]:
     added and later removed inside the range is still inspected.
     """
     if args.staged:
-        out = run("git", "diff", "--cached", "--unified=0")
+        out = run("git", "diff", "--cached", "--text", "--unified=0")
     else:
-        out = run("git", "log", *LOG_OPTIONS, "--patch", "--unified=0", *range_revs(args))
+        out = run(
+            "git", "log", *LOG_OPTIONS, "--patch", "--text", "--unified=0", *range_revs(args)
+        )
 
     added: dict[str, list[str]] = {}
     current = ""
