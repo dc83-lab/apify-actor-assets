@@ -3,6 +3,7 @@
 Last updated: 2026-08-08
 
 ## Current state
+- 2026-11-07: instruction-layer cut (1487B → 805B), see docs/decisions/2026-11-07-instruction-layer-audit.md
 
 - Public image host for Apify Store actor pages; served via
   `raw.githubusercontent.com/dc83-lab/apify-actor-assets/main/<actor>/<file>.png`.
